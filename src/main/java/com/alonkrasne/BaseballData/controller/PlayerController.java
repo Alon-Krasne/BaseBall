@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping(path = "api/v1/player")
+@RequestMapping(path = "api/players")
 @Slf4j
 @RequiredArgsConstructor
 public class PlayerController {

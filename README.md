@@ -3,7 +3,7 @@
 ## Description
 
 This application provides a REST API for baseball data.
-The data is stored in a CSV file and is loaded into memory when the application starts.
+The data is stored in a CSV file and is loaded into memory (using H2 database) when the application starts.
 
 ## Prerequisites
 
@@ -32,9 +32,10 @@ __*
 
 ## Further improvements
 
+* Consider using a different data store, such as a database, to allow for better scalability and performance.
 * Add DTOs for the API, to allow for better separation between the API and the service layer.
 * Add support for filtering and sorting. For example - allowing the user to filter and sort by name in order to allow
   a these features in a UI.
-* Add authentication for the endpoints. Also CORS support.
+* Add authentication for the endpoints, Also CORS support.
 * Allow smarter data fetching. For example - allow reload on file change, or fetch from a remote service.
 * Dockerize the application, to allow for a more portable and stable deployment.

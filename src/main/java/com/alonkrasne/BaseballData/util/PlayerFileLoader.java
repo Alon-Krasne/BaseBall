@@ -19,7 +19,7 @@ public class PlayerFileLoader {
                 .build()
                 .parse();
 
-        if (players.size() == 0) {
+        if (players.isEmpty()) {
             throw new IOException("No players found in file");
         }
         return players;

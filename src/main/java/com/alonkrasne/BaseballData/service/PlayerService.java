@@ -7,6 +7,8 @@ import com.alonkrasne.BaseballData.util.PlayerFileLoader;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -20,9 +22,10 @@ public class PlayerService {
     @Value("${player.csv.file.path}")
     private String playerCsvFilePath;
 
-    public List<Player> getPlayers() {
+    public List<Player> getPlayers(int pageNumber, int pageSize) {
         log.debug("Received request to get all players");
-        return playerRepository.findAll();
+        Page<Player> page = playerRepository.findAll(PageRequest.of(pageNumber, pageSize));
+        return page.getContent();
     }
 
     public Player getPlayerById(String id) throws PlayerNotFoundException {

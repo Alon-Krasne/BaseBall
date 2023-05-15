@@ -21,7 +21,7 @@ class PlayerServiceTest {
     void initDbHappyPath() {
         ReflectionTestUtils.setField(playerService, "playerCsvFilePath", "one_player.csv");
         playerService.initDb();
-        List<Player> players = playerService.getPlayers();
+        List<Player> players = playerService.getPlayers(0, 10);
         assertEquals(players.size(), 1);
     }
 

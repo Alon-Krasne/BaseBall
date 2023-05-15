@@ -5,10 +5,7 @@ import com.alonkrasne.BaseballData.entity.Player;
 import com.alonkrasne.BaseballData.service.PlayerService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -20,9 +17,10 @@ public class PlayerController {
     private final PlayerService playerService;
 
     @GetMapping
-    public List<Player> getPlayers() {
-        log.debug("Received request to get all players");
-        return playerService.getPlayers();
+    public List<Player> getPlayers(@RequestParam(defaultValue = "0") int pageNumber,
+                                   @RequestParam(defaultValue = "10") int pageSize) {
+        log.debug("Received request to get all players with pageNumber: {} and pageSize: {}", pageNumber, pageSize);
+        return playerService.getPlayers(pageNumber, pageSize);
     }
 
     @GetMapping("/{id}")

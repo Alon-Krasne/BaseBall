@@ -27,5 +27,14 @@ __*
 ## API
 
 * `GET /api/players` - Returns a list of all players, supports pagination with `pageNumber` and `pageSize` query
-  parameters
+  parameters. The default page size is 10 (with page number 0).
 * `GET /api/players/{id}` - Returns a single player with the given ID
+
+## Further improvements
+
+* Add DTOs for the API, to allow for better separation between the API and the service layer.
+* Add support for filtering and sorting. For example - allowing the user to filter and sort by name in order to allow
+  a these features in a UI.
+* Add authentication for the endpoints. Also CORS support.
+* Allow smarter data fetching. For example - allow reload on file change, or fetch from a remote service.
+* Dockerize the application, to allow for a more portable and stable deployment.

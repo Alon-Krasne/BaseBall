@@ -11,7 +11,7 @@ import java.io.InputStreamReader;
 import java.util.List;
 
 public class PlayerFileLoader {
-    public static List<Player> loadPlayerFile(String filePath) throws IOException {
+    public static List<Player> loadPlayerFile(String filePath) throws RuntimeException, IOException {
         Resource resource = new ClassPathResource(filePath);
         BufferedReader br = new BufferedReader(new InputStreamReader(resource.getInputStream()));
         List<Player> players = new CsvToBeanBuilder<Player>(br)
@@ -20,7 +20,7 @@ public class PlayerFileLoader {
                 .parse();
 
         if (players.isEmpty()) {
-            throw new IOException("No players found in file");
+            throw new RuntimeException("No players found in file");
         }
         return players;
     }

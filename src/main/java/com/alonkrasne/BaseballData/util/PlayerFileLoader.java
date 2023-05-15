@@ -6,14 +6,14 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 
 import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.List;
 
 public class PlayerFileLoader {
     public static List<Player> loadPlayerFile(String filePath) throws IOException {
         Resource resource = new ClassPathResource(filePath);
-        BufferedReader br = new BufferedReader(new FileReader(resource.getFile()));
+        BufferedReader br = new BufferedReader(new InputStreamReader(resource.getInputStream()));
         List<Player> players = new CsvToBeanBuilder<Player>(br)
                 .withType(Player.class)
                 .build()

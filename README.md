@@ -15,8 +15,8 @@ The data is stored in a CSV file and is loaded into memory (using H2 database) w
 1. Create a build using [Maven](https://maven.apache.org/) by running `mvn clean install` (Maven installation
    required, )
 
-__NOTE: You can also run `./mvnw clean install` on MacOS and Linux (or `mvnw.cmd` on Windows) to avoid installing Maven
-__
+**NOTE: You can also run `./mvnw clean install` on MacOS and Linux (or `mvnw.cmd` on Windows)
+to avoid installing Maven.**
 
 ## Usage
 

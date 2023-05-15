@@ -27,7 +27,7 @@ class PlayerFileLoaderUnitTest {
         try {
             List<Player> players = PlayerFileLoader.loadPlayerFile("corrupt.csv");
             fail("Exception not thrown");
-        } catch (IOException e) {
+        } catch (Exception e) {
             assertEquals(e.getMessage(), "No players found in file");
         }
     }

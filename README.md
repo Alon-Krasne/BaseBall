@@ -17,8 +17,8 @@ The data is stored in a CSV file and is loaded into memory when the application 
 ## Usage
 
 1. Run the application using `java -jar target/baseball-data-1.0.0.jar`
-1. The application will be available at `http://localhost:8080`
-1. The API documentation will be available at `http://localhost:8080/swagger-ui`
+1. The application will be available at http://localhost:8080
+1. The API documentation will be available at http://localhost:8080/swagger-ui
 
 ## API
 

@@ -12,11 +12,15 @@ The data is stored in a CSV file and is loaded into memory when the application 
 ## Installation
 
 1. Clone the repository
-1. Create a build using [Maven](https://maven.apache.org/) by running `mvn clean install`
+1. Create a build using [Maven](https://maven.apache.org/) by running `mvn clean install` (Maven installation
+   required, )
+
+*__NOTE: You can also run `./mvnw clean install` on MacOS and Linux (or `mvnw.cmd` on Windows) to avoid installing Maven
+__*
 
 ## Usage
 
-1. Run the application using `java -jar target/baseball-data-1.0.0.jar`
+1. Run the application using `java -jar target/BaseballData-0.0.1-SNAPSHOT.jar`
 1. The application will be available at http://localhost:8080
 1. The API documentation will be available at http://localhost:8080/swagger-ui
 

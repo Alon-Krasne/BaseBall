@@ -35,7 +35,7 @@ to avoid installing Maven.**
 * Add tests to cover the entire application.
 * Add configuration service, to be injected into the controllers and services, to allow for better configuration
   management.
-* Consider using a different data store, such as a database (RDBS ), to allow for better scalability and performance.
+* Consider using a different data store, such as a database, to allow for better scalability and performance.
 * Add DTOs for the API, to allow for better separation between the API and the service layer.
 * Add support for filtering and sorting. For example, allowing the user to filter and sort by name in order to allow
   these features in a UI.
